@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>Tracking</title>
+
+
+<style>
+body{
+  background:#c0c0c0; 
+}
+
+#wrapper{ 
+  width: 900px; 
+  margin: 0 auto;
+  background:#f2e8c9; 
+}
+
+
+#header{
+position:relative; 
+  height: 250px; 
+  background-color: #ffffff; 
+  margin-bottom: 5px;
+  border-radius: 5px; 
+  box-shadow: rgba(0,0,0,0.5) 0px 1px 3px; 
+}
+img{ 
+float: left; 
+  margin: 30px 0 0 0 ;} 
+h1{ 
+  margin:0 0 10px 40px; 
+  color:#464451; 
+}
+.nomer{ 
+  position:absolute; 
+  top:5px; 
+  left:680px; 
+  font-size: 25px; 
+  font-style:italic; 
+  font-weight:bold; 
+  color:#464451; 
+}
+
+
+
+#sidebar{ 
+  background-color: #ffffff; 
+  width: 180px; 
+  padding: 10px; 
+  float: right; 
+  border-radius: 5px; 
+  box-shadow: rgba(0,0,0,0.5) 0px 1px 3px; 
+}
+.marcer{ 
+  float: left; 
+  margin: 5px 5px 0 0; 
+}
+
+#content{ 
+  margin-bottom: 5px; 
+  width: 676px; 
+  padding: 10px; 
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: rgba(0,0,0,0.5) 0px 1px 3px;
+}
+.left{ 
+  float: left;
+  margin: 0px 0px 0px 0px;
+}
+.right{ 
+  float: right;
+  margin: 7px 0 7px 7px;
+}
+
+
+#footer{ 
+  height:80px; 
+  background-color: #ffffff; 
+  margin-bottom: 10px;
+  border-radius: 5px; 
+  box-shadow: rgba(0,0,0,0.5) 0px 1px 3px; 
+}
+.clear{ 
+  clear: both;
+}
+  .fon{ 
+  float:left;
+  margin:20px 0 0 20px;
+}
+.fax{ 
+  float:left;
+  margin:20px 0 0 60px;
+}
+.mail{ 
+  float:left;
+ margin:20px 0 0 60px;
+}
+ul.b {
+  list-style-type: square;
+}
+    <style>
+        #calculator {
+  background-color: #ffffff; 
+  width: 180px; 
+  padding: 10px;
+  float: right;
+  border-radius: 5px; 
+  box-shadow: rgba(0,0,0,0.5) 0px 1px 3px; 
+
+        }
+
+       #calculator button {
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #display {
+            width: 80%;
+            height: 40px;
+            font-size: 24px; 
+            margin: 10px auto;
+        }
+    </style>
+</style>
+</head>
+<body>
+  <div id="wrapper"> 
+    <div id="header">
+      <h1 >Tracking servis in Latvia</h1>
+        <p class="nomer">889-987-05 </p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ7m7SR0Ls6zRjvvLIg8hom0KJNbqZdSdkaQ&s" width="900" height="150">
+    </div>
+    <div id="sidebar">
+      <h3>More information:</h3>
+        <p><img class="marcer" src="https://img.freepik.com/free-vector/vector-blue-arrow-isolated-white_1284-41891.jpg?semt=ais_hybrid" width="30" height="30">
+Our employees</p>
+        <p><img class="marcer"  src="https://img.freepik.com/free-vector/vector-blue-arrow-isolated-white_1284-41891.jpg?semt=ais_hybrid" width="30" height="30">
+Our equipment</p>
+        <p><img class="marcer"  src="https://img.freepik.com/free-vector/vector-blue-arrow-isolated-white_1284-41891.jpg?semt=ais_hybrid" width="30" height="30">
+Price</p>
+          <hr width="50" color="#037FFC" size="5">
+      <h3>Check out the cost!</h3>
+<div id="calculator">
+        <input type="text" id="display" disabled>
+        <br>
+        <button onclick="addToDisplay('7')">7</button>
+        <button onclick="addToDisplay('8')">8</button>
+        <button onclick="addToDisplay('9')">9</button>
+        <button onclick="addToDisplay('+')">+</button>
+        <br>
+        <button onclick="addToDisplay('4')">4</button>
+        <button onclick="addToDisplay('5')">5</button>
+        <button onclick="addToDisplay('6')">6</button>
+        <button onclick="addToDisplay('-')">-</button>
+        <br>
+        <button onclick="addToDisplay('1')">1</button>
+        <button onclick="addToDisplay('2')">2</button>
+        <button onclick="addToDisplay('3')">3</button>
+        <button onclick="addToDisplay('*')">*</button>
+        <br>
+        <button onclick="addToDisplay('0')">0</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="calculateResult()">=</button>
+        <button onclick="addToDisplay('/')">/</button>
+    </div>
+
+    <script>
+  function addToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function calculateResult() {
+            try {
+                document.getElementById('display').value = eval(document.getElementById('display').value);
+            } catch (error) {
+                document.getElementById('display').value = 'Error';
+            }
+        }
+    </script>
+
+    </div>
+    <div id="content">
+      <img class="left" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9CZCKJoKsxkuVKzjiReaTcs3X27vXTpTspw&s">
+        <h3>The fastest trucking services in Latvia</h3>
+
+<p>Trucking services are one of the most popular types of cargo transportation for several reasons. Road transport is cost-effective, it allows you to control the freight throughout the entire delivery, as well as provide route flexibility and fast delivery, especially in case of domestic deliveries.</p>
+<p>Our modern vehicles, terminals, and professional drivers will ensure timely freight transportation across the territory of Latvia. Others do what they can, and we do what you want!</p>
+ <h3>Fast and safe trucking services in Latvia</h3> 
+<p> Trucking services in Latvia are carried out on the same day, which allows us to offer our clients the fastest deliveries in the country. Our large and modern fleet of vehicles allows us to transport goods of almost any size quickly and safely.</p>
+
+<p>In addition to standard freight transportation, we can provide temperature-controlled freight transportation, dangerous goods transportation, vehicle insurance, and CMR tracking. Choosing HRX services, you can always track your shipment in our online tracking system.</p>
+<p> If you want to transport valuable cargo, we can also offer transportation insurance to eliminate all possible risks. HRX local freight transport performs multiple loading and unloading operations throughout the day, which allows us to be flexible to ensure that your orders are fulfilled quickly.</p>
+
+ <img class="right" src="http://trueimages.ru/img/0d/64/07a18f15.png">
+
+<h3>Local freight transportation</h3>
+<p>We provide freight transportation every day throughout the territory of Latvia, but the most popular delivery routes are:</p>
+
+<p>Trucking services in Riga and Riga region.</p>
+<ul class="b">
+<li>Riga – Daugavpils – Riga</li>
+<li>Riga – Liepaja – Riga</li>
+<li>Riga – Ventspils – Riga</li>
+<li>Riga – Valmiera – Riga</li>
+<li>Riga – Jelgava – Riga</li>
+
+<p>HRX, one of the most popular and reliable transport companies in Latvia, offers the fastest deliveries also to other cities in Latvia. If you would like to know more about our delivery routes, please contact HRX representatives.</p>
+    </div>
+  <div class="clear"></div>
+    <div id="footer">
+      <p class="fon"><strong>Telefon:<br> 23-15-89</strong> </p>
+      <p class="fax"><strong>Fax:<br> 17-19-07</strong></p>
+      <p class="mail"><strong>E-mail<br>cargo@gmail.com</strong></p>
+
+
+    </div>
+  </div>
+    <meta charset="utf-8">
+
+
+    <link rel="stylesheet" type="text/css" 
+        href="style.css">
+</head>
+
+<body>
+    <h1>Creat your colour for truck:</h1>
+    
+    <div class="main">
+        Result:<input type="text" id="box"
+            value="rgb(255,255,255)">
+
+        <!--  Range slider for red colour -->
+        Red:<input type="range" id="red" 
+            value="255" min="0" max="255">
+
+        <!-- Range slider for green colour -->
+        Green:<input type="range" id="green" 
+            value="255" min="0" max="255">
+
+        <!-- Range slider for blue colour -->
+        Blue:<input type="range" id="blue" 
+            value="255" min="0" max="255">
+    </div>
+
+    <script src="script.js"></script>
+<script>
+function myColour() {
+
+    var red = document.getElementById('red').value;
+
+    var green = document.getElementById('green').value;
+
+    var blue = document.getElementById('blue').value;
+
+    var colour = 'rgb(' + red + ',' + green + ',' + blue + ')';
+
+    document.body.style.backgroundColor = colour;
+
+    document.getElementById('box').value = colour;
+
+}
+
+document.getElementById('red')
+    .addEventListener('input', myColour);
+
+document.getElementById('green')
+    .addEventListener('input', myColour);
+
+document.getElementById('blue')
+    .addEventListener('input', myColour);
+</script>
+     
+</body>
+
+</html>
