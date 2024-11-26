@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Two numbets </title>
+</head>
+<body bgcolor="aadfd2">
+
+<head>
+     <title>Two numbers</title>
+<div class="container">
+  <div class="main">
+    <h1>Please enter two numbers</h1>
+    <p>First number: <input type="number" id="num1">; Second number: <input type="number" id="num2"></p>
+    <input type="button" id="btn" value="Submit" onclick="compare()">
+  </div>
+  <br>
+  <div id="result">
+  </div>
+
+  <script>
+    function compare() {
+      var num1, num2 
+      num1=document.getElementById("num1").value;
+ num2=document.getElementById("num2").value;
+      if (num1< num2){
+      document.querySelector("#result").innerHTML = ("The second number  is higher than first.");}
+      else   {
+document.querySelector("#result").innerHTML = ("The first number is higher than second");
+}
+}
+
+  </script>
+  </body>
+</html>
+
+
+
